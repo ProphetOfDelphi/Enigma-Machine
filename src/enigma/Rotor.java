@@ -64,8 +64,14 @@ public class Rotor {
 		else {
 			rotorPosition = pos;
 		}
-		
-		
+	}
+	
+	public void moveWheel() {
+		rotorPosition = (rotorPosition + 1) % 26;
+	}
+	
+	public char replace(int numberCode) {
+		return rotorReplace.charAt((rotorPosition + numberCode) % 26);
 	}
 	
 }
