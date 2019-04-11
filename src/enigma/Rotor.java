@@ -53,6 +53,10 @@ public class Rotor {
 		return rotorReplace;
 	}
 	
+	public int getRotorSetting() {
+		return rotorPosition;
+	}
+	
 	public void setWheel(int pos) {
 		if (pos >= 26) {
 			rotorPosition = pos % 26;

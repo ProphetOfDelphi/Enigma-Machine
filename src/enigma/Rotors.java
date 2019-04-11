@@ -61,4 +61,30 @@ public class Rotors {
 		}
 		return encrypted;
 	}
+	
+	public String decryptMessage(String message) {
+		String original = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		String rotor1 = A.getRotorReplace();
+		String rotor2 = B.getRotorReplace();
+		String rotor3 = C.getRotorReplace();
+		int rotor1Spacing = A.getRotorSetting();
+		int rotor2Spacing = B.getRotorSetting();
+		int rotor3Spacing = C.getRotorSetting();
+		int temp;
+		
+		for (int x = 0; 0 < message.length(); ++x) {
+			for (int y = 0; y < 26; ++y) {
+				if (message.charAt(x) == rotor1.charAt(y)) {
+					temp = y;
+				}
+			}
+			for (int y = 0; y < 26; ++y) {
+				if (rotor1.charAt(temp) == rotor1.charAt(y)) {
+					temp = y;
+				}
+			}
+			
+		}
+		return null;
+	}
 }
